@@ -6,7 +6,7 @@ angular.module('ListChecker', [])
 
 CheckerController.$inject = ['$scope'];
 function CheckerController($scope) {
-  // $scope.LunchList = "";
+  $scope.LunchList = "";
   $scope.LunchItems = [];
   $scope.numberOfItems = 0;
 
