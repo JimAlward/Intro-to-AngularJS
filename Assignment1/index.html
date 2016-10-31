@@ -11,7 +11,7 @@
     </style>
   </head>
 <body>
-   <div class="container" ng-controller='CheckerController'>
+   <div class="container" ng-controller='CheckerController' ng-init="dyncolor='#400080'">
      <h1>Lunch Checker</h1>
         <!-- LunchListMessage = {{LunchListMessage}} -->
 
@@ -20,13 +20,12 @@
              placeholder="List comma separated dishes you usually have for lunch"
              ng-model="LunchList"
              class="form-control">
+             {{emptyItem}}
          </div>
          <div class="form-group">
              <button class="btn btn-default" ng-click="checkLunchList()">Check If Too Much</button>
          </div>
-         <div class="form-group message">
-           <!-- Your message can go here. -->
-           <!-- LunchList = {{LunchItems}} -->
+         <div class="form-group message" ng-style="{color: textColor}">
            {{LunchListMessage}}
          </div>
    </div>
